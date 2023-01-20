@@ -85,7 +85,7 @@ namespace UI
 
         private void timerWebScrapingGeral_Tick(object sender, EventArgs e)
         {
-            #region DISPLAY DE OPERAÇÃO
+            #region DISPLAY DE OPERAï¿½ï¿½O
 
             BLLDisplayOperacao bllDisplayOperacao = new BLLDisplayOperacao();
 
@@ -125,6 +125,20 @@ namespace UI
             BLLContasPagar bllContasPagar = new BLLContasPagar();
 
             bllContasPagar.InserirDadosBD(bllContasPagar.LerCsv(@"C:\integraTextil\relatorios\contas_pagar\ren\contas_pagar.csv"));
+        }
+
+         private void btnRenContasPagas_Click(object sender, EventArgs e)
+        {
+            BLLContasPagas bllContasPagas = new BLLContasPagas();
+
+            bllContasPagas.RenomearArquivo(bllContasPagas.PegarNomeArquivo(@"C:\integraTextil\relatorios\contas_pagas\", "ROD"), "contas_pagas.csv", @"C:\integraTextil\relatorios\contas_pagas\", @"C:\integraTextil\relatorios\contas_pagas\ren");
+        }
+
+        private void btnInsertContasPagas_Click(object sender, EventArgs e)
+        {
+            BLLContasPagas bllContasPagas = new BLLContasPagas();
+
+            bllContasPagas.InserirDadosBD(bllContasPagas.LerCsv(@"C:\integraTextil\relatorios\contas_pagas\ren\contas_pagas.csv"));
         }
 
     }
