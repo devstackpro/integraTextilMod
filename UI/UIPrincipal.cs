@@ -85,7 +85,7 @@ namespace UI
 
         private void timerWebScrapingGeral_Tick(object sender, EventArgs e)
         {
-            #region DISPLAY DE OPERA��O
+            #region DISPLAY DE OPERAÇÃO
 
             BLLDisplayOperacao bllDisplayOperacao = new BLLDisplayOperacao();
 
@@ -127,7 +127,14 @@ namespace UI
             bllContasPagar.InserirDadosBD(bllContasPagar.LerCsv(@"C:\integraTextil\relatorios\contas_pagar\ren\contas_pagar.csv"));
         }
 
-         private void btnRenContasPagas_Click(object sender, EventArgs e)
+        private void btnDelContasPagar_Click(object sender, EventArgs e)
+        {
+            BLLContasPagar bllContasPagar = new BLLContasPagar();
+
+            bllContasPagar.DeletarArquivos(@"C:\integraTextil\relatorios\contas_pagar\ren\");
+        }
+
+        private void btnRenContasPagas_Click(object sender, EventArgs e)
         {
             BLLContasPagas bllContasPagas = new BLLContasPagas();
 
@@ -139,6 +146,13 @@ namespace UI
             BLLContasPagas bllContasPagas = new BLLContasPagas();
 
             bllContasPagas.InserirDadosBD(bllContasPagas.LerCsv(@"C:\integraTextil\relatorios\contas_pagas\ren\contas_pagas.csv"));
+        }
+
+        private void btnDelContasPagas_Click(object sender, EventArgs e)
+        {
+            BLLContasPagas bllContasPagas = new BLLContasPagas();
+
+            bllContasPagas.DeletarArquivos(@"C:\integraTextil\relatorios\contas_pagas\ren\");
         }
 
         private void btnRenCaixasFios_Click(object sender, EventArgs e)
@@ -155,5 +169,13 @@ namespace UI
             bllCaixasFios.InserirDadosBD(bllCaixasFios.LerCsv(@"C:\integraTextil\relatorios\caixas_fios\ren\caixas_fios.csv"));
         }
 
+        private void btnDelCaixasFios_Click(object sender, EventArgs e)
+        {
+            BLLCaixasFios bllCaixasFios = new BLLCaixasFios();
+
+            bllCaixasFios.DeletarArquivos(@"C:\integraTextil\relatorios\caixas_fios\ren\");
+        }
+
+        
     }
 }
