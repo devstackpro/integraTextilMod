@@ -151,30 +151,30 @@ namespace BLL
                     daoCaixasFios.Deposito = campo[3].ToString();
                     daoCaixasFios.Tran = campo[4].ToString();
                     daoCaixasFios.Transacao = campo[5].ToString();
-                    daoCaixasFios.Produto = campo[6].ToString()
-                    daoCaixasFios.Nivel = campo[7].ToString()
-                    daoCaixasFios.Grupo = campo[8].ToString()
-                    daoCaixasFios.Sub = campo[9].ToString()
-                    daoCaixasFios.Item = campo[10].ToString()
-                    daoCaixasFios.Um = campo[11].ToString()
-                    daoCaixasFios.Narrativa = campo[12].ToString()
-                    daoCaixasFios.Tpg = campo[13].ToString()
-                    daoCaixasFios.TipoGlobal = campo[14].ToString()
-                    daoCaixasFios.Lote = campo[15].ToString()
-                    daoCaixasFios.LoteProduto = campo[16].ToString()
+                    daoCaixasFios.Produto = campo[6].ToString();
+                    daoCaixasFios.Nivel = campo[7].ToString();
+                    daoCaixasFios.Grupo = campo[8].ToString();
+                    daoCaixasFios.Sub = campo[9].ToString();
+                    daoCaixasFios.Item = campo[10].ToString();
+                    daoCaixasFios.Um = campo[11].ToString();
+                    daoCaixasFios.Narrativa = campo[12].ToString();
+                    daoCaixasFios.Tpg = campo[13].ToString();
+                    daoCaixasFios.TipoGlobal = campo[14].ToString();
+                    daoCaixasFios.Lote = campo[15].ToString();
+                    daoCaixasFios.LoteProduto = campo[16].ToString();
                     daoCaixasFios.Quantidade = Convert.ToDecimal(campo[17].ToString());
                     daoCaixasFios.PesoBruto = Convert.ToDecimal(campo[18].ToString());
                     daoCaixasFios.PesoLiquido = Convert.ToDecimal(campo[19].ToString());
-                    daoCaixasFios.NumeroVolume = campo[20].ToString()
-                    daoCaixasFios.NumeroOrigem = campo[21].ToString()
-                    daoCaixasFios.Situacao = campo[22].ToString()
+                    daoCaixasFios.NumeroVolume = campo[20].ToString();
+                    daoCaixasFios.NumeroOrigem = campo[21].ToString();
+                    daoCaixasFios.Situacao = campo[22].ToString();
                     daoCaixasFios.DataEntrada = Convert.ToDateTime(campo[23].ToString());
-                    daoCaixasFios.Nf = campo[24].ToString()
-                    daoCaixasFios.Serie = campo[25].ToString()
-                    daoCaixasFios.seqNf = campo[26].ToString()
-                    daoCaixasFios.Fornecedor = campo[27].ToString()
-                    daoCaixasFios.NomeFornecedor = campo[28].ToString()
-                    daoCaixasFios.Obs = campo[29].ToString()
+                    daoCaixasFios.Nf = campo[24].ToString();
+                    daoCaixasFios.Serie = campo[25].ToString();
+                    daoCaixasFios.seqNf = campo[26].ToString();
+                    daoCaixasFios.Fornecedor = campo[27].ToString();
+                    daoCaixasFios.NomeFornecedor = campo[28].ToString();
+                    daoCaixasFios.Obs = campo[29].ToString();
 
                     daoCaixasFiosList.Add(daoCaixasFios);
                 }
@@ -196,7 +196,7 @@ namespace BLL
                 {
                     DAOCaixasFios daoCaixasFios = new DAOCaixasFios();
 
-                    daoCaixasFios.Emp = linha["Emp"].ToString();g();
+                    daoCaixasFios.Emp = linha["Emp"].ToString();
                     daoCaixasFios.Empresa = linha["Empresa"].ToString();
                     daoCaixasFios.Dep = linha["Dep"].ToString();
                     daoCaixasFios.Deposito = linha["Deposito"].ToString();
@@ -204,7 +204,7 @@ namespace BLL
                     daoCaixasFios.Transacao = linha["Transacao"].ToString();
                     daoCaixasFios.Produto = linha["Produto"].ToString();
                     daoCaixasFios.Nivel = linha["Nivel"].ToString();
-                    daoCaixasFios.Grupo = linha["Grupo"].ToString();)
+                    daoCaixasFios.Grupo = linha["Grupo"].ToString();
                     daoCaixasFios.Sub = linha["Sub"].ToString();
                     daoCaixasFios.Item = linha["Item"].ToString();
                     daoCaixasFios.Um = linha["Um"].ToString();

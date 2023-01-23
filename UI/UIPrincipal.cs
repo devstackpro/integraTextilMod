@@ -141,5 +141,19 @@ namespace UI
             bllContasPagas.InserirDadosBD(bllContasPagas.LerCsv(@"C:\integraTextil\relatorios\contas_pagas\ren\contas_pagas.csv"));
         }
 
+        private void btnRenCaixasFios_Click(object sender, EventArgs e)
+        {
+            BLLCaixasFios bllCaixasFios = new BLLCaixasFios();
+
+            bllCaixasFios.RenomearArquivo(bllCaixasFios.PegarNomeArquivo(@"C:\integraTextil\relatorios\caixas_fios\", "ROD"), "caixas_fios.csv", @"C:\integraTextil\relatorios\caixas_fios\", @"C:\integraTextil\relatorios\caixas_fios\ren");
+        }
+
+        private void btnInsertCaixasFios_Click(object sender, EventArgs e)
+        {
+            BLLCaixasFios bllCaixasFios = new BLLCaixasFios();
+
+            bllCaixasFios.InserirDadosBD(bllCaixasFios.LerCsv(@"C:\integraTextil\relatorios\caixas_fios\ren\caixas_fios.csv"));
+        }
+
     }
 }
