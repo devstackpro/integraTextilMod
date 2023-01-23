@@ -147,19 +147,34 @@ namespace BLL
                 {
                     daoCaixasFios.Emp = campo[0].ToString();
                     daoCaixasFios.Empresa = campo[1].ToString();
-                    daoCaixasFios.TipoTitulo = campo[2].ToString();
-                    daoCaixasFios.Portador = campo[3].ToString();
-                    daoCaixasFios.Posicao = campo[4].ToString();
-                    daoCaixasFios.CentroCusto = campo[5].ToString();
-                    daoCaixasFios.DataEmissao = Convert.ToDateTime(campo[6].ToString());
-                    daoCaixasFios.DataVencto = Convert.ToDateTime(campo[7].ToString());
-                    daoCaixasFios.DataPagto = Convert.ToDateTime(campo[8].ToString());
-                    daoCaixasFios.ValorParcela = Convert.ToDecimal(campo[9].ToString());
-                    daoCaixasFios.ValorPago = Convert.ToDecimal(campo[10].ToString());
-                    daoCaixasFios.ValorJuros = Convert.ToDecimal(campo[11].ToString());
-                    daoCaixasFios.ValorDesconto = Convert.ToDecimal(campo[12].ToString());
-                    daoCaixasFios.ValorAbatido = Convert.ToDecimal(campo[13].ToString());
-                    daoCaixasFios.SaldoParcela = Convert.ToDecimal(campo[14].ToString());
+                    daoCaixasFios.Dep = campo[2].ToString();
+                    daoCaixasFios.Deposito = campo[3].ToString();
+                    daoCaixasFios.Tran = campo[4].ToString();
+                    daoCaixasFios.Transacao = campo[5].ToString();
+                    daoCaixasFios.Produto = campo[6].ToString()
+                    daoCaixasFios.Nivel = campo[7].ToString()
+                    daoCaixasFios.Grupo = campo[8].ToString()
+                    daoCaixasFios.Sub = campo[9].ToString()
+                    daoCaixasFios.Item = campo[10].ToString()
+                    daoCaixasFios.Um = campo[11].ToString()
+                    daoCaixasFios.Narrativa = campo[12].ToString()
+                    daoCaixasFios.Tpg = campo[13].ToString()
+                    daoCaixasFios.TipoGlobal = campo[14].ToString()
+                    daoCaixasFios.Lote = campo[15].ToString()
+                    daoCaixasFios.LoteProduto = campo[16].ToString()
+                    daoCaixasFios.Quantidade = Convert.ToDecimal(campo[17].ToString());
+                    daoCaixasFios.PesoBruto = Convert.ToDecimal(campo[18].ToString());
+                    daoCaixasFios.PesoLiquido = Convert.ToDecimal(campo[19].ToString());
+                    daoCaixasFios.NumeroVolume = campo[20].ToString()
+                    daoCaixasFios.NumeroOrigem = campo[21].ToString()
+                    daoCaixasFios.Situacao = campo[22].ToString()
+                    daoCaixasFios.DataEntrada = Convert.ToDateTime(campo[23].ToString());
+                    daoCaixasFios.Nf = campo[24].ToString()
+                    daoCaixasFios.Serie = campo[25].ToString()
+                    daoCaixasFios.seqNf = campo[26].ToString()
+                    daoCaixasFios.Fornecedor = campo[27].ToString()
+                    daoCaixasFios.NomeFornecedor = campo[28].ToString()
+                    daoCaixasFios.Obs = campo[29].ToString()
 
                     daoCaixasFiosList.Add(daoCaixasFios);
                 }
@@ -181,39 +196,69 @@ namespace BLL
                 {
                     DAOCaixasFios daoCaixasFios = new DAOCaixasFios();
 
+                    daoCaixasFios.Emp = linha["Emp"].ToString();g();
+                    daoCaixasFios.Empresa = linha["Empresa"].ToString();
+                    daoCaixasFios.Dep = linha["Dep"].ToString();
+                    daoCaixasFios.Deposito = linha["Deposito"].ToString();
+                    daoCaixasFios.Tran = linha["Tran"].ToString();
+                    daoCaixasFios.Transacao = linha["Transacao"].ToString();
+                    daoCaixasFios.Produto = linha["Produto"].ToString();
+                    daoCaixasFios.Nivel = linha["Nivel"].ToString();
+                    daoCaixasFios.Grupo = linha["Grupo"].ToString();)
+                    daoCaixasFios.Sub = linha["Sub"].ToString();
+                    daoCaixasFios.Item = linha["Item"].ToString();
+                    daoCaixasFios.Um = linha["Um"].ToString();
+                    daoCaixasFios.Narrativa = linha["Narrativa"].ToString();
+                    daoCaixasFios.Tpg = linha["Tpg"].ToString();
+                    daoCaixasFios.TipoGlobal = linha["TipoGlobal"].ToString();
+                    daoCaixasFios.Lote = linha["Lote"].ToString();
+                    daoCaixasFios.LoteProduto = linha["LoteProduto"].ToString();
+                    daoCaixasFios.Quantidade = Convert.ToDecimal(linha["Quantidade"].ToString());
+                    daoCaixasFios.PesoBruto = Convert.ToDecimal(linha["PesoBruto"].ToString());
+                    daoCaixasFios.PesoLiquido = Convert.ToDecimal(linha["PesoLiquido"].ToString());
+                    daoCaixasFios.NumeroVolume = linha["NumeroVolume"].ToString();
+                    daoCaixasFios.NumeroOrigem = linha["NumeroOrigem"].ToString();
+                    daoCaixasFios.Situacao = linha["Situacao"].ToString();
+                    daoCaixasFios.DataEntrada = Convert.ToDateTime(linha["DataEntrada"].ToString());
+                    daoCaixasFios.Nf = linha["Nf"].ToString();
+                    daoCaixasFios.Serie = linha["Serie"].ToString();
+                    daoCaixasFios.seqNf = linha["seqNf"].ToString();
                     daoCaixasFios.Fornecedor = linha["Fornecedor"].ToString();
-                    daoCaixasFios.Duplicata = linha["Duplicata"].ToString();
-                    daoCaixasFios.TipoTitulo = linha["TipoTitulo"].ToString();
-                    daoCaixasFios.Portador = linha["Portador"].ToString();
-                    daoCaixasFios.Posicao = linha["Posicao"].ToString();
-                    daoCaixasFios.CentroCusto = linha["CentroCusto"].ToString();
-                    daoCaixasFios.DataEmissao = Convert.ToDateTime(linha["DataEmissao"].ToString());
-                    daoCaixasFios.DataVencto = Convert.ToDateTime(linha["DataVencto"].ToString());
-                    daoCaixasFios.DataPagto = Convert.ToDateTime(linha["DataPagto"].ToString());
-                    daoCaixasFios.ValorParcela = Convert.ToDecimal(linha["ValorParcela"].ToString());
-                    daoCaixasFios.ValorPago = Convert.ToDecimal(linha["ValorPago"].ToString());
-                    daoCaixasFios.ValorJuros = Convert.ToDecimal(linha["ValorJuros"].ToString());
-                    daoCaixasFios.ValorDesconto = Convert.ToDecimal(linha["ValorDesconto"].ToString());
-                    daoCaixasFios.ValorAbatido = Convert.ToDecimal(linha["ValorAbatido"].ToString());
-                    daoCaixasFios.SaldoParcela = Convert.ToDecimal(linha["SaldoParcela"].ToString());
+                    daoCaixasFios.NomeFornecedor = linha["NomeFornecedor"].ToString();
+                    daoCaixasFios.Obs = linha["Obs"].ToString();
 
                     dalMySQL.LimparParametros();
 
+                    dalMySQL.AdicionaParametros("@Emp", daoCaixasFios.Emp);
+                    dalMySQL.AdicionaParametros("@Empresa", daoCaixasFios.Empresa);
+                    dalMySQL.AdicionaParametros("@Dep", daoCaixasFios.Dep);
+                    dalMySQL.AdicionaParametros("@Deposito", daoCaixasFios.Deposito);
+                    dalMySQL.AdicionaParametros("@Tran", daoCaixasFios.Tran);
+                    dalMySQL.AdicionaParametros("@Transacao", daoCaixasFios.Transacao);
+                    dalMySQL.AdicionaParametros("@Produto", daoCaixasFios.Produto);
+                    dalMySQL.AdicionaParametros("@Nivel", daoCaixasFios.Nivel);
+                    dalMySQL.AdicionaParametros("@Grupo", daoCaixasFios.Grupo);
+                    dalMySQL.AdicionaParametros("@Sub", daoCaixasFios.Sub);
+                    dalMySQL.AdicionaParametros("@Item", daoCaixasFios.Item);
+                    dalMySQL.AdicionaParametros("@Um", daoCaixasFios.Um);
+                    dalMySQL.AdicionaParametros("@Narrativa", daoCaixasFios.Narrativa);
+                    dalMySQL.AdicionaParametros("@Tpg", daoCaixasFios.Tpg);
+                    dalMySQL.AdicionaParametros("@TipoGlobal", daoCaixasFios.TipoGlobal);
+                    dalMySQL.AdicionaParametros("@Lote", daoCaixasFios.Lote);
+                    dalMySQL.AdicionaParametros("@LoteProduto", daoCaixasFios.LoteProduto);
+                    dalMySQL.AdicionaParametros("@Quantidade", daoCaixasFios.Quantidade);
+                    dalMySQL.AdicionaParametros("@PesoBruto", daoCaixasFios.PesoBruto);
+                    dalMySQL.AdicionaParametros("@PesoLiquido", daoCaixasFios.PesoLiquido);
+                    dalMySQL.AdicionaParametros("@NumeroVolume", daoCaixasFios.NumeroVolume);
+                    dalMySQL.AdicionaParametros("@NumeroOrigem", daoCaixasFios.NumeroOrigem);
+                    dalMySQL.AdicionaParametros("@Situacao", daoCaixasFios.Situacao);
+                    dalMySQL.AdicionaParametros("@DataEntrada", daoCaixasFios.DataEntrada);
+                    dalMySQL.AdicionaParametros("@Nf", daoCaixasFios.Nf);
+                    dalMySQL.AdicionaParametros("@Serie", daoCaixasFios.Serie);
+                    dalMySQL.AdicionaParametros("@seqNf", daoCaixasFios.seqNf);
                     dalMySQL.AdicionaParametros("@Fornecedor", daoCaixasFios.Fornecedor);
-                    dalMySQL.AdicionaParametros("@Duplicata", daoCaixasFios.Duplicata);
-                    dalMySQL.AdicionaParametros("@TipoTitulo", daoCaixasFios.TipoTitulo);
-                    dalMySQL.AdicionaParametros("@Portador", daoCaixasFios.Portador);
-                    dalMySQL.AdicionaParametros("@Posicao", daoCaixasFios.Posicao);
-                    dalMySQL.AdicionaParametros("@CentroCusto", daoCaixasFios.CentroCusto);
-                    dalMySQL.AdicionaParametros("@DataEmissao", daoCaixasFios.DataEmissao);
-                    dalMySQL.AdicionaParametros("@DataVencto", daoCaixasFios.DataVencto);
-                    dalMySQL.AdicionaParametros("@DataPagto", daoCaixasFios.DataPagto);
-                    dalMySQL.AdicionaParametros("@ValorParcela", daoCaixasFios.ValorParcela);
-                    dalMySQL.AdicionaParametros("@ValorPago", daoCaixasFios.ValorPago);
-                    dalMySQL.AdicionaParametros("@ValorJuros", daoCaixasFios.ValorJuros);
-                    dalMySQL.AdicionaParametros("@ValorDesconto", daoCaixasFios.ValorDesconto);
-                    dalMySQL.AdicionaParametros("@ValorAbatido", daoCaixasFios.ValorAbatido);
-                    dalMySQL.AdicionaParametros("@SaldoParcela", daoCaixasFios.SaldoParcela);
+                    dalMySQL.AdicionaParametros("@NomeFornecedor", daoCaixasFios.NomeFornecedor);
+                    dalMySQL.AdicionaParametros("@Obs", daoCaixasFios.Obs);
 
 
                     dalMySQL.ExecutarManipulacao(CommandType.StoredProcedure, "uspCaixasFiosInserir");
