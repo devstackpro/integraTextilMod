@@ -15,7 +15,7 @@ UI = user interface -> Camada de interface de usuário (tela, botoes, menus, met
 4 - INSERIR NO UI O BOTAO DE EXECUCAO DOS METODOS DA BLL
 
 # COLABORADORES
-1 - Igor Santiello
+1 - Igor Silverio
 2 - Rosa Maria Cano de Abreu
 3 - Tiago de Abreu
 4 - Glauber Coutinho
