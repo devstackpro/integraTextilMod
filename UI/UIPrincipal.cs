@@ -175,6 +175,26 @@ namespace UI
 
             bllCaixasFios.DeletarArquivos(@"C:\integraTextil\relatorios\caixas_fios\ren\");
         }
+        private void btnRenNotasFiscais_Click(object sender, EventArgs e)
+        {
+            BLLCaixasFios bllNotasFiscai = new BLLNotasFiscai();
+
+            bllNotasFiscai.RenomearArquivo(bllNotasFiscai.PegarNomeArquivo(@"C:\integraTextil\relatorios\notas_fiscais\", "ROD"), "notas_fiscais.csv", @"C:\integraTextil\relatorios\notas_fiscais", @"C:\integraTextil\relatorios\notas_fiscais\ren");
+        }
+
+        private void btnRenNotasFiscais_Click(object sender, EventArgs e)
+        {
+            BLLNotasFiscai BLLNotasFiscai = new BLLNotasFiscai();
+
+            BLLNotasFiscai.InserirDadosBD(bllnotasfiscais.LerCsv(@"C:\integraTextil\relatorios\notas_fiscais\ren\notas_fiscais.csv"));
+        }
+
+        private void btnRenNotasFiscais_Click(object sender, EventArgs e)
+        {
+            BLLNotasFiscai BLLNotasFiscai = new BLLNotasFiscai();
+
+            BLLNotasFiscai.DeletarArquivos(@"C:\integraTextil\relatorios\notas_fiscais\ren\");
+        }
 
         
     }
