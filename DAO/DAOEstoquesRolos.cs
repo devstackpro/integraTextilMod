@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAOs
 {
-    public class DAONotasFiscais
+    public class DAOEstoquesRolos
     {
         public string Emp { get; set; }
         public string Cnpj { get; set; }
