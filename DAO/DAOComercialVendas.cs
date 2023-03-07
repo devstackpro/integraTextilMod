@@ -21,8 +21,8 @@ namespace DAO
         public string Situacao { get; set; }
         public string BloqueiosPendentes { get; set; }
         public string BloqueiosLiberados { get; set; }
-        public DateTime Emissao { get; set; }
-        public DateTime Entrega { get; set; }
+        public string Emissao { get; set; }
+        public string Entrega { get; set; }
         public string Chegada { get; set; }
         public string Periodo { get; set; }
         public string Uf { get; set; }
@@ -31,14 +31,14 @@ namespace DAO
         public string Fantasia { get; set; }
         public string Geco { get; set; }
         public string GrupoEconomico { get; set; }
-        public DateTime DataValidadeLimite { get; set; }
-        public DateTime DataAlteracaoLimite { get; set; }
+        public string DataValidadeLimite { get; set; }
+        public string DataAlteracaoLimite { get; set; }
         public string ObsCredito { get; set; }
         public string LimCreditoConfeccao { get; set; }
         public string LimCreditoTecidos { get; set; }
         public string LimCreditoCrus { get; set; }
         public string LimCreditoFios { get; set; }
-        public DateTime DataUltimaFatura { get; set; }
+        public string DataUltimaFatura { get; set; }
         public decimal PedidosAFaturar { get; set; }
         public decimal TitulosVencidos { get; set; }
         public decimal TitulosAVenc { get; set; }
