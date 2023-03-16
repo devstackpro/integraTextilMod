@@ -155,7 +155,9 @@ namespace BLL
                     daoNotasFiscais.Natureza = campo[6].ToString();
                     daoNotasFiscais.Cfop = campo[7].ToString();
                     daoNotasFiscais.DescNatureza = campo[8].ToString();
+
                     daoNotasFiscais.DataMotivo = Convert.ToDateTime(campo[9].ToString());
+
                     daoNotasFiscais.EntradaSaida = campo[10].ToString();
                     daoNotasFiscais.FaturamentoSimNao = campo[11].ToString();
                     daoNotasFiscais.ParametroNatFat = campo[12].ToString();
@@ -164,6 +166,7 @@ namespace BLL
                     daoNotasFiscais.Produto = campo[15].ToString();
                     daoNotasFiscais.DescricaoItem = campo[16].ToString();
                     daoNotasFiscais.Um = campo[17].ToString();
+                    
                     daoNotasFiscais.qtdesaida = Convert.ToDecimal(campo[18].ToString());
                     daoNotasFiscais.ValorSaida = Convert.ToDecimal(campo[19].ToString());
                     daoNotasFiscais.UnitarioSaida = Convert.ToDecimal(campo[20].ToString());
