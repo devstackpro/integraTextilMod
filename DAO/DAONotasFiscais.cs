@@ -28,10 +28,10 @@ namespace DAOs
         public string Um { get; set; }
         public decimal qtdesaida { get; set; }
         public decimal ValorSaida { get; set; }
-        public string UnitarioSaida { get; set; }
+        public decimal UnitarioSaida { get; set; }
         public decimal QtdeEntrada { get; set; }
         public decimal ValorEntrada { get; set; }
-        public string UnitarioEntrada { get; set; }
+        public decimal UnitarioEntrada { get; set; }
         public string NfOrigem { get; set; }
         public string Pedido { get; set; }
         public string CnpjTransportadora { get; set; }
@@ -42,25 +42,25 @@ namespace DAOs
         public string ClassificFiscal { get; set; }
         public string ClassifContabil { get; set; }
         public string CodigoContabil { get; set; }
-        public string BaseIpi { get; set; }
-        public string PercIpi { get; set; }
+        public decimal BaseIpi { get; set; }
+        public decimal PercIpi { get; set; }
         public decimal ValorIpi { get; set; }
-        public string CvfIpi { get; set; }
-        public string BaseIcms { get; set; }
-        public string ValorIcms { get; set; }
-        public string CvfIcms { get; set; }
-        public string Procedencia { get; set; }
-        public string BaseDiferencia { get; set; }
-        public string CvfPis { get; set; }
+        public decimal CvfIpi { get; set; }
+        public decimal BaseIcms { get; set; }
+        public decimal ValorIcms { get; set; }
+        public decimal CvfIcms { get; set; }
+        public decimal Procedencia { get; set; }
+        public decimal BaseDiferencia { get; set; }
+        public decimal CvfPis { get; set; }
         public decimal CvfConfins { get; set; }
         public decimal PercConfins { get; set; }
-        public string BasePisCofins { get; set; }
+        public decimal BasePisCofins { get; set; }
         public decimal ValorPis { get; set; }
         public decimal ValorCofins { get; set; }
-        public string PercSubtituicao { get; set; }
-        public string BaseSubtituicao { get; set; }
+        public decimal PercSubtituicao { get; set; }
+        public decimal BaseSubtituicao { get; set; }
         public decimal ValorSubtituicao { get; set; }
-        public string Projeto { get; set; }
+        public string Projeto { get; set; } 
 
     }
 }
