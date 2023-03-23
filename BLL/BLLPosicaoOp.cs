@@ -69,7 +69,7 @@ namespace BLL
                 }
                 else
                 {
-                    bllFerramentas.GravarLog(@"C:\integratextil\logs\logs.txt", "Sucesso: Relatório de posicao das ops, nome: " + arquivoNome + ".  Detalhes: Classe: BLLContasPagas.cs | Metodo: PegarNomeArquivo | " + data);
+                    bllFerramentas.GravarLog(@"C:\integratextil\logs\logs.txt", "Sucesso: Relatório de posicao das ops encontrado, nome: " + arquivoNome + ".  Detalhes: Classe: BLLContasPagas.cs | Metodo: PegarNomeArquivo | " + data);
                 }
 
             }
@@ -144,36 +144,29 @@ namespace BLL
                 index++;
 
                 if (index > 1)
-                            {
-                    daoPosicaoOp.Col = campo[0].ToString();
-                    daoPosicaoOp.Colecao = campo[1].ToString();
-                    daoPosicaoOp.Lin = campo[2].ToString();
-                    daoPosicaoOp.Linha = campo[3].ToString();
-                    daoPosicaoOp.Art = campo[4].ToString();
-                    daoPosicaoOp.Artigo = campo[5].ToString();
-                    daoPosicaoOp.Nivel = campo[6].ToString();
-                    daoPosicaoOp.Grupo = campo[7].ToString();
-                    daoPosicaoOp.Sub = campo[8].ToString();
-                    daoPosicaoOp.Cor = campo[9].ToString();
-                    daoPosicaoOp.Produto = campo[10].ToString();
-                    daoPosicaoOp.NomeGrupo = campo[11].ToString();
-                    daoPosicaoOp.NomeSub = campo[12].ToString();
-                    daoPosicaoOp.NomeCor = campo[13].ToString();
-                    daoPosicaoOp.Narrativa = campo[14].ToString();
-                    daoPosicaoOp.EmEstoque = Convert.ToDecimal(campo[15].ToString());
-                    daoPosicaoOp.EmProducao = Convert.ToDecimal(campo[16].ToString());
-                    daoPosicaoOp.Necessidade = Convert.ToDecimal(campo[17].ToString());
-                    daoPosicaoOp.Saldo = Convert.ToDecimal(campo[18].ToString());
-                    daoPosicaoOp.Sobra = Convert.ToDecimal(campo[19].ToString());
-                    daoPosicaoOp.Falta = Convert.ToDecimal(campo[20].ToString());
-                    daoPosicaoOp.Vendido = Convert.ToDecimal(campo[21].ToString());
-                    daoPosicaoOp.Faturado = Convert.ToDecimal(campo[22].ToString());
-                    daoPosicaoOp.AFaturar = Convert.ToDecimal(campo[23].ToString());
-                    daoPosicaoOp.Cancelado = Convert.ToDecimal(campo[24].ToString());
-                    daoPosicaoOp.Bloqueado = campo[25].ToString();
-                    daoPosicaoOp.Estoque = Convert.ToDecimal(campo[26].ToString());
-                    daoPosicaoOp.ProntaEntrega = Convert.ToDecimal(campo[27].ToString());
-                    daoPosicaoOp.Outros = Convert.ToDecimal(campo[28].ToString());
+                {
+                    daoPosicaoOp.MaquinaOp = campo[0].ToString();
+                    daoPosicaoOp.Op = campo[1].ToString();
+                    daoPosicaoOp.Est = campo[2].ToString();
+                    daoPosicaoOp.Estagio = campo[3].ToString();
+                    daoPosicaoOp.Processo = campo[4].ToString();
+                    daoPosicaoOp.Produto = campo[5].ToString();
+                    daoPosicaoOp.Tpg = campo[6].ToString();
+                    daoPosicaoOp.Um = campo[7].ToString();
+                    daoPosicaoOp.Narrativa = campo[8].ToString();
+                    daoPosicaoOp.Nivel = campo[9].ToString();
+                    daoPosicaoOp.Grupo = campo[10].ToString();
+                    daoPosicaoOp.Sub = campo[11].ToString();
+                    daoPosicaoOp.Item = campo[12].ToString();
+                    daoPosicaoOp.EstagioPosicao = campo[13].ToString();
+                    daoPosicaoOp.QtdeProgramado = Convert.ToDecimal(campo[14].ToString());
+                    daoPosicaoOp.QtdeCarregado = Convert.ToDecimal(campo[15].ToString());
+                    daoPosicaoOp.QtdeProduzida = Convert.ToDecimal(campo[16].ToString());
+                    daoPosicaoOp.MaquinaReal = campo[17].ToString();
+                    daoPosicaoOp.NomeMaquinaReal = campo[18].ToString();
+                    daoPosicaoOp.InicioReal = campo[19].ToString();
+                    daoPosicaoOp.TerminoReal = campo[20].ToString();
+                    daoPosicaoOp.Obs = campo[21].ToString();
 
 
                     daoPosicaoOpList.Add(daoPosicaoOp);
@@ -195,69 +188,55 @@ namespace BLL
                 DataTable dataTablePosicaoOpList = ConvertToDataTable(daoPosicaoOpList);
                 foreach (DataRow linha in dataTablePosicaoOpList.Rows)
                 {
-                    DAOPosicaoOp daoPosicaoOp = new DAOPosicaoOp();
-                    daoPosicaoOp.Col = linha["Col"].ToString();
-                    daoPosicaoOp.Colecao = linha["Colecao"].ToString();
-                    daoPosicaoOp.Lin = linha["Lin"].ToString();
-                    daoPosicaoOp.Linha = linha["Linha"].ToString();
-                    daoPosicaoOp.Art = linha["Art"].ToString();
-                    daoPosicaoOp.Artigo = linha["Artigo"].ToString();
+                    daoPosicaoOp.MaquinaOp = linha["MaquinaOp"].ToString();
+                    daoPosicaoOp.Op = linha["Op"].ToString();
+                    daoPosicaoOp.Est = linha["Est"].ToString();
+                    daoPosicaoOp.Estagio = linha["Estagio"].ToString();
+                    daoPosicaoOp.Processo = linha["Processo"].ToString();
+                    daoPosicaoOp.Produto = linha["Produto"].ToString();
+                    daoPosicaoOp.Tpg = linha["Tpg"].ToString();
+                    daoPosicaoOp.Um = linha["Um"].ToString();
+                    daoPosicaoOp.Narrativa = linha["Narrativa"].ToString();
                     daoPosicaoOp.Nivel = linha["Nivel"].ToString();
                     daoPosicaoOp.Grupo = linha["Grupo"].ToString();
                     daoPosicaoOp.Sub = linha["Sub"].ToString();
-                    daoPosicaoOp.Cor = linha["Cor"].ToString();
-                    daoPosicaoOp.Produto = linha["Produto"].ToString();
-                    daoPosicaoOp.NomeGrupo = linha["NomeGrupo"].ToString();
-                    daoPosicaoOp.NomeSub = linha["NomeSub"].ToString();
-                    daoPosicaoOp.NomeCor = linha["NomeCor"].ToString();
-                    daoPosicaoOp.Narrativa = linha["Narrativa"].ToString();
-                    daoPosicaoOp.EmEstoque = Convert.ToDecimal(linha["EmEstoque"].ToString());
-                    daoPosicaoOp.EmProducao = Convert.ToDecimal(linha["EmProducao"].ToString());
-                    daoPosicaoOp.Necessidade = Convert.ToDecimal(linha["Necessidade"].ToString());
-                    daoPosicaoOp.Saldo = Convert.ToDecimal(linha["Saldo"].ToString());
-                    daoPosicaoOp.Sobra = Convert.ToDecimal(linha["Sobra"].ToString());
-                    daoPosicaoOp.Falta = Convert.ToDecimal(linha["Falta"].ToString());
-                    daoPosicaoOp.Vendido = Convert.ToDecimal(linha["Vendido"].ToString());
-                    daoPosicaoOp.Faturado = Convert.ToDecimal(linha["Faturado"].ToString());
-                    daoPosicaoOp.AFaturar = Convert.ToDecimal(linha["AFaturar"].ToString());
-                    daoPosicaoOp.Cancelado = Convert.ToDecimal(linha["Cancelado"].ToString());
-                    daoPosicaoOp.Bloqueado = linha["Bloqueado"].ToString();
-                    daoPosicaoOp.Estoque = Convert.ToDecimal(linha["Estoque"].ToString());
-                    daoPosicaoOp.ProntaEntrega = Convert.ToDecimal(linha["ProntaEntrega"].ToString());
-                    daoPosicaoOp.Outros = Convert.ToDecimal(linha["Outros"].ToString());
+                    daoPosicaoOp.Item = linha["Item"].ToString();
+                    daoPosicaoOp.EstagioPosicao = linha["EstagioPosicao"].ToString();
+                    daoPosicaoOp.QtdeProgramado = Convert.ToDecimal(linha["QtdeProgramado"].ToString());
+                    daoPosicaoOp.QtdeCarregado = Convert.ToDecimal(linha["QtdeCarregado"].ToString());
+                    daoPosicaoOp.QtdeProduzida = Convert.ToDecimal(linha["QtdeProduzida"].ToString());
+                    daoPosicaoOp.MaquinaReal = linha["MaquinaReal"].ToString();
+                    daoPosicaoOp.NomeMaquinaReal = linha["NomeMaquinaReal"].ToString();
+                    daoPosicaoOp.InicioReal = linha["InicioReal"].ToString();
+                    daoPosicaoOp.TerminoReal = linha["TerminoReal"].ToString();
+                    daoPosicaoOp.Obs= linha["Obs"].ToString();
+
 
                     dalMySQL.LimparParametros();
 
-                    dalMySQL.AdicionaParametros("@Emp", daoPosicaoOp.Emp);
-                    dalMySQL.AdicionaParametros("@Col", daoPosicaoOp.Col);
-                    dalMySQL.AdicionaParametros("@Colecao", daoPosicaoOp.Colecao);
-                    dalMySQL.AdicionaParametros("@Lin", daoPosicaoOp.Lin);
-                    dalMySQL.AdicionaParametros("@Linha", daoPosicaoOp.Linha);
-                    dalMySQL.AdicionaParametros("@Art", daoPosicaoOp.Art);
-                    dalMySQL.AdicionaParametros("@Artigo", daoPosicaoOp.Artigo);
-                    dalMySQL.AdicionaParametros("@Nivel", daoPosicaoOp.Nivel);
-                    dalMySQL.AdicionaParametros("@Grupo", daoPosicaoOp.Grupo);
-                    dalMySQL.AdicionaParametros("@Sub", daoPosicaoOp.Sub);
-                    dalMySQL.AdicionaParametros("@Cor", daoPosicaoOp.Cor);
-                    dalMySQL.AdicionaParametros("@Produto", daoPosicaoOp.Produto);
-                    dalMySQL.AdicionaParametros("@NomeGrupo", daoPosicaoOp.NomeGrupo);
-                    dalMySQL.AdicionaParametros("@NomeSub", daoPosicaoOp.NomeSub);
-                    dalMySQL.AdicionaParametros("@NomeCor", daoPosicaoOp.NomeCor);
-                    dalMySQL.AdicionaParametros("@Narrativa", daoPosicaoOp.Narrativa);
-                    dalMySQL.AdicionaParametros("@EmEstoque", daoPosicaoOp.EmEstoque);
-                    dalMySQL.AdicionaParametros("@EmProducao", daoPosicaoOp.EmProducao);
-                    dalMySQL.AdicionaParametros("@Necessidade", daoPosicaoOp.Necessidade);
-                    dalMySQL.AdicionaParametros("@Saldo", daoPosicaoOp.Saldo);
-                    dalMySQL.AdicionaParametros("@Sobra", daoPosicaoOp.Sobra);
-                    dalMySQL.AdicionaParametros("@Falta", daoPosicaoOp.Falta);
-                    dalMySQL.AdicionaParametros("@Vendido", daoPosicaoOp.Vendido);
-                    dalMySQL.AdicionaParametros("@Faturado", daoPosicaoOp.Faturado);
-                    dalMySQL.AdicionaParametros("@AFaturar", daoPosicaoOp.AFaturar);
-                    dalMySQL.AdicionaParametros("@Cancelado", daoPosicaoOp.Cancelado);
-                    dalMySQL.AdicionaParametros("@Bloqueado", daoPosicaoOp.Bloqueado);
-                    dalMySQL.AdicionaParametros("@Estoque", daoPosicaoOp.Estoque);
-                    dalMySQL.AdicionaParametros("@ProntaEntrega", daoPosicaoOp.ProntaEntrega);
-                    dalMySQL.AdicionaParametros("@Outros", daoPosicaoOp.Outros);
+                        dalMySQL.AdicionaParametros("@MaquinaOp", daoPosicaoOp.MaquinaOp);
+                        dalMySQL.AdicionaParametros("@Op", daoPosicaoOp.Op);
+                        dalMySQL.AdicionaParametros("@Est", daoPosicaoOp.Est);
+                        dalMySQL.AdicionaParametros("@Estagio", daoPosicaoOp.Estagio);
+                        dalMySQL.AdicionaParametros("@Processo", daoPosicaoOp.Processo);
+                        dalMySQL.AdicionaParametros("@Produto", daoPosicaoOp.Produto);
+                        dalMySQL.AdicionaParametros("@Tpg", daoPosicaoOp.Tpg);
+                        dalMySQL.AdicionaParametros("@Um", daoPosicaoOp.Um);
+                        dalMySQL.AdicionaParametros("@Narrativa", daoPosicaoOp.Narrativa);
+                        dalMySQL.AdicionaParametros("@Nivel", daoPosicaoOp.Nivel);
+                        dalMySQL.AdicionaParametros("@Grupo", daoPosicaoOp.Grupo);
+                        dalMySQL.AdicionaParametros("@Sub", daoPosicaoOp.Sub);
+                        dalMySQL.AdicionaParametros("@Item", daoPosicaoOp.Item);
+                        dalMySQL.AdicionaParametros("@EstagioPosicao", daoPosicaoOp.EstagioPosicao);
+                        dalMySQL.AdicionaParametros("@QtdeProgramado", daoPosicaoOp.QtdeProgramado);
+                        dalMySQL.AdicionaParametros("@QtdeCarregado", daoPosicaoOp.EQtdeCarregadomp);
+                        dalMySQL.AdicionaParametros("@QtdeProduzida", daoPosicaoOp.QtdeProduzida);
+                        dalMySQL.AdicionaParametros("@MaquinaReal", daoPosicaoOp.MaquinaReal);
+                        dalMySQL.AdicionaParametros("@NomeMaquinaReal", daoPosicaoOp.NomeMaquinaReal);
+                        dalMySQL.AdicionaParametros("@InicioReal", daoPosicaoOp.InicioReal);
+                        dalMySQL.AdicionaParametros("@TerminoReal", daoPosicaoOp.TerminoReal);
+                        dalMySQL.AdicionaParametros("@Obs", daoPosicaoOp.Obs);
+
                 }
 
                 retorno = "ok";
