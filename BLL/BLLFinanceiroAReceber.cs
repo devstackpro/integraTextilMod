@@ -161,9 +161,9 @@ namespace BLL
                     daoFinanceiroAReceber.Endosso = campo[13].ToString();
                     daoFinanceiroAReceber.PedidoVenda = campo[14].ToString();
                     daoFinanceiroAReceber.Representante = campo[15].ToString();
-                    daoFinanceiroAReceber.PercComissao = Convert.ToDateTime(campo[16].ToString());
-                    daoFinanceiroAReceber.BaseComissao = Convert.ToDateTime(campo[17].ToString());
-                    daoFinanceiroAReceber.ValorComissao = Convert.ToDateTime(campo[18].ToString());
+                    daoFinanceiroAReceber.PercComissao = Convert.ToDecimal(campo[16].ToString());
+                    daoFinanceiroAReceber.BaseComissao = Convert.ToDecimal(campo[17].ToString());
+                    daoFinanceiroAReceber.ValorComissao = Convert.ToDecimal(campo[18].ToString());
                     daoFinanceiroAReceber.Portador = campo[19].ToString();
                     daoFinanceiroAReceber.NumeroBordero = campo[20].ToString();
                     daoFinanceiroAReceber.NumeroRemessa = campo[21].ToString();
@@ -171,10 +171,10 @@ namespace BLL
                     daoFinanceiroAReceber.ContaCorrente = campo[23].ToString();
                     daoFinanceiroAReceber.CodCarteira = campo[24].ToString();
                     daoFinanceiroAReceber.Transacao = campo[25].ToString();
-                    daoFinanceiroAReceber.PercDesconto = Convert.ToDateTime(campo[26].ToString());
+                    daoFinanceiroAReceber.PercDesconto = Convert.ToDecimal(campo[26].ToString());
                     daoFinanceiroAReceber.NrSolicitacao = campo[27].ToString();
-                    daoFinanceiroAReceber.ValorDuplicata = Convert.ToDateTime(campo[28].ToString());
-                    daoFinanceiroAReceber.SaldoDuplicata = Convert.ToDateTime(campo[29].ToString());
+                    daoFinanceiroAReceber.ValorDuplicata = Convert.ToDecimal(campo[28].ToString());
+                    daoFinanceiroAReceber.SaldoDuplicata = Convert.ToDecimal(campo[29].ToString());
                     daoFinanceiroAReceber.Moeda = campo[30].ToString();
                     daoFinanceiroAReceber.Prorrogacao = campo[31].ToString();
                     daoFinanceiroAReceber.Posicao = campo[32].ToString();
@@ -186,7 +186,7 @@ namespace BLL
                     daoFinanceiroAReceber.FormaPagto = campo[38].ToString();
                     daoFinanceiroAReceber.CodBarras = campo[39].ToString();
                     daoFinanceiroAReceber.LinhaDigitavel = campo[40].ToString();
-                    daoFinanceiroAReceber.DuplicImpressa = Convert.ToDateTime(campo[41].ToString());
+                    daoFinanceiroAReceber.DuplicImpressa = Convert.ToDecimal(campo[41].ToString());
                     daoFinanceiroAReceber.Previsao = campo[42].ToString();
                     daoFinanceiroAReceber.NumeroTitulo = campo[43].ToString();
                     daoFinanceiroAReceber.NotaFiscal = campo[44].ToString();
@@ -194,7 +194,7 @@ namespace BLL
                     daoFinanceiroAReceber.CodCancelamento = campo[46].ToString();
                     daoFinanceiroAReceber.Cancelamento = campo[47].ToString();
                     daoFinanceiroAReceber.CodigoContabil = campo[48].ToString();
-                    daoFinanceiroAReceber.ValorMoeda = Convert.ToDateTime(campo[49].ToString());
+                    daoFinanceiroAReceber.ValorMoeda = Convert.ToDecimal(campo[49].ToString());
                     daoFinanceiroAReceber.CodUsuario = campo[50].ToString();
                     daoFinanceiroAReceber.NumeroCaixa = campo[51].ToString();
                     daoFinanceiroAReceber.NrAdiantamento = campo[52].ToString();
@@ -203,7 +203,7 @@ namespace BLL
                     daoFinanceiroAReceber.EmailCliente = campo[55].ToString();
                     daoFinanceiroAReceber.Radm = campo[56].ToString();
                     daoFinanceiroAReceber.Administrador = campo[57].ToString();
-                    daoFinanceiroAReceber.ComissaoAdministr = Convert.ToDateTime(campo[58].ToString());
+                    daoFinanceiroAReceber.ComissaoAdministr = Convert.ToDecimal(campo[58].ToString());
 
                     
                     daoFinanceiroAReceberList.Add(daoFinanceiroAReceber);
@@ -226,7 +226,7 @@ namespace BLL
                 {
                     DAOFinanceiroAReceber daoFinanceiroAReceber = new DAOFinanceiroAReceber();
 
-                     daoContasReceber.Empresa = linha["Empresa"].ToString();
+                    daoContasReceber.Empresa = linha["Empresa"].ToString();
                     daoContasReceber.NumDuplicata = linha["NumDuplicata"].ToString();
                     daoContasReceber.Parcela = linha["Parcela"].ToString(); 
                     daoContasReceber.TipoTitulo = linha["TipoTitulo"].ToString();
